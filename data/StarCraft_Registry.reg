@@ -1,0 +1,5 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\Software\Blizzard Entertainment\Starcraft]
+"GamePath"="C:\\StarCraft\\Starcraft.exe"
+"InstallPath"="C:\\StarCraft\\"

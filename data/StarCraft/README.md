@@ -1,0 +1,1 @@
+If this folder contains a legal copy of StarCraft Broodwar the game will be included into the image.
