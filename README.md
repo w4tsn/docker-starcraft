@@ -61,6 +61,8 @@ docker run --rm --privileged -it -p 8888:8888 -p 5900:5900 lionax/docker-starcra
 
 With this you find yourself in a shell session within the container to control the execution and injection of bots into StarCraft Broodwar.
 
+**Important**: *The `--privileged` is mandatory. Without it the injector is not able to modify the memory for dll injections.*
+
 **Inject a bot into StarCraft:**
 
 The injection is done with [bwheadless](https://github.com/tscmoo/bwheadless).
