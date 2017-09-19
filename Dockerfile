@@ -100,17 +100,6 @@ RUN curl -L https://github.com/lionax/bwapi/releases/download/v4.1.2/bwapi-data-
       && rm /tmp/bwapi-data.zip \
       && chmod 755 -R $STARCRAFT/bwapi-data
 
-# Get BWTA 2.2
-ENV BWTA_DIR /home/starcraft/.wine/drive_c/bwta
-RUN curl -L https://bitbucket.org/auriarte/bwta2/downloads/BWTAlib_2.2.7z -o /tmp/bwta.7z \
-   && 7zr x -o$BWTA_DIR /tmp/bwta.7z \
-      && rm /tmp/bwta.7z \
-      && mv $BWTA_DIR/BWTAlib_2.2/* $BWTA_DIR \
-      && rm -R $BWTA_DIR/BWTAlib_2.2 \
-      && chmod 755 -R $BWTA_DIR \
-      && cp $BWTA_DIR/windows/libgmp-10.dll /home/starcraft/.wine/drive_c/windows \
-      && cp $BWTA_DIR/windows/libmpfr-4.dll /home/starcraft/.wine/drive_c/windows
-
 RUN chown -R starcraft:starcraft /home/starcraft/
 
 ADD entrypoint.sh /bin/entrypoint
